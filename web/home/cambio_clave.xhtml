@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./../templates/base.xhtml">
+<ui:define name="content">
+
+    #{homeController.accesoURL(true, "")}
+    <h:form>
+        <h2>
+            <h:graphicImage library="images" name="llave.png" />
+            <h:outputText value="Cambio de Clave" />
+        </h2>
+
+        <h4> <h:messages globalOnly="false" style="color: red" /> </h4>
+
+        <pre> <h:outputLabel value="Clave Actual  :" /> <h:inputSecret id="act" value="#{homeController.claveAct}" />
+              <h:outputLabel value="Clave Nueva   :" /> <h:inputSecret id="new" value="#{homeController.claveNew}" />
+              <h:outputLabel value="Clave Repetida:" /> <h:inputSecret id="rep" value="#{homeController.claveRep}" /> </pre>
+        <h:commandButton value="Aceptar" action="#{homeController.cambiarPWD()}" />
+        <h:commandButton value="Cancelar" action="#{homeController.index()}" immediate="true" />
+        <br /> <br />
+    </h:form>
+
+</ui:define>
+</ui:composition>

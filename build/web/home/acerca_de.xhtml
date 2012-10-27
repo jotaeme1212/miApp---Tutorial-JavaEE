@@ -1,0 +1,23 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./../templates/base.xhtml">
+
+<ui:define name="content">
+
+    #{homeController.accesoURL(true, "")}
+    <h2 align='center'> <h:outputText value="Control de Acceso a Usuarios" /> </h2>
+
+    <h3 align='center'>
+        <h:outputText value="Aplicación - Versión 1.0 - Desarrollado en Java EE 6" /> <br /> <br />
+        <h:graphicImage library="images" name="logojava.png" />
+    </h3>
+
+    <pre align='center'>
+        <h:outputText value="Visitenos en BLA BLA BLA" />
+    </pre>
+
+</ui:define>
+
+</ui:composition>

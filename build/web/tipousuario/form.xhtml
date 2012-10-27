@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <h2><h:outputText value="Tipo de Usuario"/></h2>
+
+    <h4> <h:messages globalOnly="false" style="color: red" /> </h4>
+
+    <pre>
+        <h:outputLabel value="ID        :" for="id" />
+        <h:inputText id="id" value="#{tipousuarioController.selected.id}" title="Id" disabled="true" />
+
+        <h:outputLabel value="Nombre    :" for="nombre" />
+        <h:inputText id="nombre" value="#{tipousuarioController.selected.nombre}" />
+
+        <h:outputLabel value="Creado    :" for="created" />
+        <h:inputText id="created" value="#{tipousuarioController.selected.created}" title="Creado" disabled="true" >
+            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" />
+        </h:inputText>
+
+        <h:outputLabel value="Modificado:" for="updated" />
+        <h:inputText id="updated" value="#{tipousuarioController.selected.updated}" title="Actualizado" disabled="true" >
+            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" />
+        </h:inputText> </pre>
+
+</ui:composition>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./templates/base.xhtml">
+<ui:define name="content">
+<h:form>
+
+<h2> <h:outputText value="Opciones de Menu y Acceso a Usuarios"/> </h2>
+
+<table>
+  <tr>
+    <td> <h:commandLink action="#{tipousuarioController.index()}"> <h:graphicImage library="images" name="tipos.png" /> </h:commandLink> </td>
+    <td></td>
+    <td> <h:commandLink action="#{usuarioController.index()}"> <h:graphicImage library="images" name="usuario.png" /> </h:commandLink> </td>
+    <td></td>
+    <td> <h:commandLink action="#{menuController.index()}"> <h:graphicImage library="images" name="menu.png" /> </h:commandLink> </td>
+    <td></td>
+    <td> <h:commandLink action="#{menuTipousuarioController.index()}"> <h:graphicImage library="images" name="control.png" /> </h:commandLink> </td>
+  </tr>
+
+  <tr>
+    <th> <h:outputText value="Tipos de Usuario"/> </th>
+    <th></th>
+    <th> <h:outputText value="Usuarios del Sistema"/> </th>
+    <th></th>
+    <th> <h:outputText value="Opciones de Menú"/> </th>
+    <th></th>
+    <th> <h:outputText value="Control de Accesos"/> </th>
+  </tr>
+</table>
+
+<pre align="center">
+<h:outputText value="Cree sus propios menu, agrege usuarios al sistema y ademas controle el acceso de los usuarios."/> <br /> <br />
+<h:outputText value="Los botones de la barra superior son para el mantenimiento de la aplicacion."/> <br /> <br />
+<h:outputText value="Saludos!!"/>
+</pre>
+
+</h:form>
+</ui:define>
+</ui:composition>
